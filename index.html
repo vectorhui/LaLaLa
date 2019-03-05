@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>杨春辉的个人简历</title>
+	<link rel="stylesheet" href="index.css">
+	<style>
+		
+
+	</style>
+	<script>
+		window.onload = function () {
+			var oContainer = document.querySelector("#container");
+			var oMain = document.querySelector("#main");
+			var aDesc = oMain.querySelectorAll(".desc");
+			var oHeader = document.querySelector("header");
+			var H = document.documentElement.clientHeight;
+			var oNav = document.querySelector("#nav");
+			var oUl = oNav.querySelector("ul");
+			var aLi = oUl.querySelectorAll("li");
+
+			var navList = [["Info","I"],["Skills","S"],["Project","P"],["Work","W"]];
+
+			var disD = 0;
+			var disS = 0;
+			var disM = 0;
+			var x = 0;
+			var num = 0;
+			var num2 = 0;
+			var scrollRunning = false;
+
+
+			oContainer.style.height = H + "px";
+
+			for (var i = 0; i < aDesc.length; i++) {
+				aDesc[i].style.height = H + "px";
+			}
+
+
+			oMain.addEventListener("touchstart", tStart, false);
+			oMain.addEventListener("touchmove", tMove, false);
+			oMain.addEventListener("touchend", tEnd, false);
+
+
+			oMain.addEventListener("mousewheel", fnM, false);
+
+			function fnM(ev) {
+				var ev = ev || window.event;
+
+				if (ev.wheelDelta < 0 && scrollRunning == false && num2 < 3) {
+					clearNav(num2);
+					num2++;
+					scrollRunning = true;
+					this.style.top = -(num2) * H + "px";
+					this.style.transition = "0.5s";
+					changeNav(num2);
+
+					setTimeout(function () {
+						scrollRunning = false;
+					}, 500);
+
+				} else if (ev.wheelDelta > 0 && scrollRunning == false && num2 > 0) {
+					clearNav(num2);
+					num2--;
+					scrollRunning = true;
+					this.style.top = -(num2) * H + "px";
+					this.style.transition = "0.5s";
+					changeNav(num2);
+
+					setTimeout(function () {
+						scrollRunning = false;
+					}, 500);
+
+				} else {
+					this.style.top = -(num2) * H + "px";
+				}
+			}
+
+
+
+			function tStart(ev) {
+				var ev = ev || window.event;
+				disS = ev.changedTouches[0].pageY;
+
+			}
+
+			function tMove(ev) {
+				if (!scrollRunning) {
+					var ev = ev || window.event;
+				disM = ev.changedTouches[0].pageY - disS;
+				if (disM > 50) {
+					oHeader.style.top = "0px";
+					oHeader.style.transition = "0.5s";
+				} else if (disM < -50) {
+					oHeader.style.top = "-40px";
+					oHeader.style.transition = "0.5s";
+				}
+				x = disD + disM;
+				if (x >= 0) {
+					x = 0;
+				};
+				this.style.top = x + "px";
+				}
+				
+			}
+
+			function tEnd(ev) {
+				var ev = ev || window.event;
+				var disE = ev.changedTouches[0].pageY;
+				disM = disE - disS;
+				if (disM < -100 && num < 3 && scrollRunning == false) {
+					clearNav(num);
+					num++;
+					scrollRunning = true;
+					this.style.top = -(num) * H + "px";
+					this.style.transition = "0.5s";
+					changeNav(num);
+					
+					setTimeout(function () {
+						scrollRunning = false;
+					}, 500);
+
+				} else if (disM > 100 && num > 0 && scrollRunning == false) {
+					clearNav(num);
+					num--;
+					scrollRunning = true;
+					this.style.top = -(num) * H + "px";
+					this.style.transition = "0.5s";
+					changeNav(num);
+					setTimeout(function () {
+						scrollRunning = false;
+					}, 500);
+				}
+				else {
+					this.style.top = -(num) * H + "px";
+				}
+				disD = parseInt(this.style.top);
+			}
+
+			function clearNav(n){
+				aLi[n].className = "";
+				aLi[n].innerHTML = navList[n][1];
+			}
+
+			function changeNav(n) {
+				aLi[n].className = "active";
+				aLi[n].innerHTML = navList[n][0];
+			}
+
+		}
+	</script>
+</head>
+
+<body>
+	<header>
+
+	</header>
+	<div id="container">
+		<section id="main">
+			<div id="info" class="desc">
+				<div id="logo"></div>
+				<div id="introduction">
+					<h1>杨春辉</h1>
+					<h2>WEB前端开发工程师</h2>
+					<h3>男 / 26岁 / 江南大学(211高校)</h3>
+					<div>
+						<span>手机：185 2940 1503</span>
+						<span>邮箱：<a href="">ych0122vector@163.com</a></span>
+					</div>
+				</div>
+			</div>
+			<div id="skills" class="desc">
+				<h1>工作技能</h1>
+				<ul>
+					<li>
+						<h5>HTML</h5>
+						<div class="progress-bar">
+							<div id="html-bar"></div>
+						</div>
+					</li>
+					<li>
+						<h5>CSS</h5>
+						<div class="progress-bar">
+							<div id="css-bar"></div>
+						</div>
+					</li>
+					<li>
+						<h5>JavaScript</h5>
+						<div class="progress-bar">
+							<div id="js-bar"></div>
+						</div>
+					</li>
+					<li>
+						<h5>BootStrap</h5>
+						<div class="progress-bar">
+							<div id="bs-bar"></div>
+						</div>
+					</li>
+					<li>
+						<h5>Vue</h5>
+						<div class="progress-bar">
+							<div id="v-bar"></div>
+						</div>
+					</li>
+					<li>
+						<h5>Axure</h5>
+						<div class="progress-bar">
+							<div id="axure-bar"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div id="project" class="desc">
+				<h1>项目经验</h1>
+			</div>
+			<div id="work" class="desc">
+				<h1>工作经历</h1>
+			</div>
+		</section>
+		<aside id="nav">
+			<ul>
+				<li class="active">Info</li>
+				<li>S</li>
+				<li>P</li>
+				<li>W</li>
+			</ul>
+		</aside>
+	</div>
+
+</body>
+
+</html>
