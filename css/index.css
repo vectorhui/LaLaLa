@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+}
+li {
+  padding: 0;
+  list-style: none;
+}
+header {
+  position: fixed;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+#container {
+  overflow: hidden;
+  position: relative;
+}
+#main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+}
+#main #info {
+  background: #eeeeee;
+  overflow: hidden;
+  text-align: center;
+}
+#main #info #logo {
+  width: 100px;
+  height: 100px;
+  border: 4px solid white;
+  border-radius: 50%;
+  background: url(../images/img.jpg) no-repeat;
+  background-size: 100px 100px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+#main #info #introduction h1 {
+  font-size: 38px;
+  color: #00b38a;
+}
+#main #info #introduction h2 {
+  font-size: 28px;
+  color: #00b38a;
+  font-weight: normal;
+}
+#main #info #introduction h3 {
+  color: #555;
+  font-weight: normal;
+  font-size: 18px;
+}
+#main #info #introduction div span {
+  display: block;
+  color: #555;
+  font-size: 16px;
+  margin-top: 10px;
+}
+#main #skills {
+  background: #00b38a;
+  overflow: hidden;
+}
+#main #skills h1 {
+  text-align: center;
+}
+#main #skills .progress-bar {
+  width: 90%;
+  height: 10px;
+  background: #555;
+}
+#main #skills ul li {
+  padding-top: 10px;
+}
+#main #skills ul h5 {
+  width: 20%;
+}
+#main #skills ul #html-bar {
+  width: 90%;
+  background: yellowgreen;
+  height: 10px;
+}
+#main #skills ul #css-bar {
+  width: 85%;
+  background: yellowgreen;
+  height: 10px;
+}
+#main #skills ul #js-bar {
+  width: 80%;
+  background: yellowgreen;
+  height: 10px;
+}
+#main #skills ul #bs-bar {
+  width: 80%;
+  background: yellowgreen;
+  height: 10px;
+}
+#main #skills ul #v-bar {
+  width: 75%;
+  background: yellowgreen;
+  height: 10px;
+}
+#main #skills ul #axure-bar {
+  width: 90%;
+  background: yellowgreen;
+  height: 10px;
+}
+#main #project {
+  background: yellow;
+  overflow: hidden;
+}
+#main #project h1 {
+  text-align: center;
+}
+#main #work {
+  background: blue;
+  overflow: hidden;
+}
+#main #work h1 {
+  text-align: center;
+}
+#nav {
+  position: fixed;
+  top: 40%;
+  left: 0;
+}
+#nav ul {
+  padding: 0;
+}
+#nav ul li {
+  width: 40px;
+  height: 40px;
+  background: #000000;
+  color: white;
+  padding: 0;
+  margin-top: 5px;
+  text-align: center;
+  line-height: 40px;
+}
+#nav ul .active {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+}
