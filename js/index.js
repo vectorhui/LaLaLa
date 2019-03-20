@@ -48,6 +48,13 @@ window.onload = function () {
     }
 
     init();
+    
+    oMain.addEventListener("touchstart", tStart, false);
+    oMain.addEventListener("touchmove", tMove, false);
+    oMain.addEventListener("touchend", tEnd, false);
+       
+    oMain.addEventListener("mousewheel", fnM, false);
+        
 
     oMain.addEventListener("touchstart", tStart, false);
     oMain.addEventListener("touchmove", tMove, false);
