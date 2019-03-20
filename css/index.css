@@ -1,24 +1,19 @@
 body {
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
 }
 a {
   text-decoration: none;
+  color: #555555;
 }
 ul {
   margin: 0;
+  padding: 0;
 }
 li {
   padding: 0;
   list-style: none;
-}
-header {
-  position: fixed;
-  top: -40px;
-  left: 0;
-  width: 100%;
-  height: 40px;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 100;
 }
 #container {
   overflow: hidden;
@@ -31,6 +26,49 @@ header {
   width: 100%;
   color: white;
 }
+#main .desc-title {
+  font-size: 32px;
+  margin-left: 5%;
+}
+#main .desc-content {
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+}
+#main .desc-content h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: normal;
+}
+#main .desc-content .content-list {
+  margin-left: 30%;
+  border-left: 4px solid #ffffff;
+  position: relative;
+  padding: 3px 0 10px 50px;
+}
+#main .desc-content .content-list ul li {
+  padding: 10px 20px;
+}
+#main .desc-content .content-list .desc-content-time {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: #ffffff;
+  position: absolute;
+  top: 0px;
+  left: -22px;
+}
+#main .desc-content .content-list .desc-content-time span {
+  color: #555;
+  font-size: 16px;
+  position: absolute;
+  left: -220px;
+  height: 30px;
+  width: 200px;
+  text-align: right;
+  line-height: 30px;
+  top: 5px;
+}
 #main #info {
   background: #eeeeee;
   overflow: hidden;
@@ -41,7 +79,7 @@ header {
   height: 100px;
   border: 4px solid white;
   border-radius: 50%;
-  background: url(../images/img.jpg) no-repeat;
+  background: url(image/img.jpg) no-repeat;
   background-size: 100px 100px;
   margin: 0 auto;
   margin-top: 100px;
@@ -70,63 +108,75 @@ header {
   background: #00b38a;
   overflow: hidden;
 }
-#main #skills h1 {
-  text-align: center;
-}
 #main #skills .progress-bar {
   width: 90%;
   height: 10px;
   background: #555;
 }
+#main #skills .desc-content {
+  width: 85%;
+  margin: 0 auto;
+}
 #main #skills ul li {
-  padding-top: 10px;
+  padding-top: 15px;
+  width: 50%;
+  float: left;
 }
 #main #skills ul h5 {
   width: 20%;
+  font-size: 24px;
+  font-weight: normal;
 }
 #main #skills ul #html-bar {
-  width: 90%;
+  width: 0%;
   background: yellowgreen;
   height: 10px;
+  transition: 1s;
 }
 #main #skills ul #css-bar {
-  width: 85%;
+  width: 0%;
   background: yellowgreen;
   height: 10px;
+  transition: 1s;
 }
 #main #skills ul #js-bar {
-  width: 80%;
+  width: 0%;
   background: yellowgreen;
   height: 10px;
+  transition: 1s;
 }
 #main #skills ul #bs-bar {
-  width: 80%;
+  width: 0%;
   background: yellowgreen;
   height: 10px;
+  transition: 1s;
 }
 #main #skills ul #v-bar {
-  width: 75%;
+  width: 0%;
   background: yellowgreen;
   height: 10px;
+  transition: 1s;
 }
 #main #skills ul #axure-bar {
-  width: 90%;
+  width: 0%;
   background: yellowgreen;
   height: 10px;
+  transition: 1s;
 }
 #main #project {
-  background: yellow;
+  background: #eeeeee;
   overflow: hidden;
+  color: #00b38a;
 }
-#main #project h1 {
-  text-align: center;
+#main #project .desc-content .content-list {
+  height: 30%;
 }
 #main #work {
-  background: blue;
+  background: #00b38a;
   overflow: hidden;
 }
-#main #work h1 {
-  text-align: center;
+#main #work .desc-content .content-list {
+  height: 24%;
 }
 #nav {
   position: fixed;
@@ -139,15 +189,89 @@ header {
 #nav ul li {
   width: 40px;
   height: 40px;
-  background: #000000;
+  background: #333333;
   color: white;
   padding: 0;
   margin-top: 5px;
   text-align: center;
   line-height: 40px;
+  transition: .3s;
+  cursor: pointer;
+}
+#nav ul li :hover {
+  background: rgba(33, 33, 33, 0.5);
 }
 #nav ul .active {
   width: 60px;
   height: 60px;
   line-height: 60px;
+}
+@media screen and (max-width: 750px) {
+  #nav {
+    display: none;
+  }
+  #main .desc-title {
+    font-size: 22px;
+  }
+  #main .desc-content {
+    width: 95%;
+  }
+  #main .desc-content h3 {
+    font-size: 16px;
+  }
+  #main .desc-content .content-list {
+    margin-left: 15%;
+    border-left: 2px solid #ffffff;
+    position: relative;
+    padding: 0px 0 10px 20px;
+  }
+  #main .desc-content .content-list ul li {
+    padding: 15px 0 0 10px;
+  }
+  #main .desc-content .content-list .desc-content-time {
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    left: -10px;
+  }
+  #main .desc-content .content-list .desc-content-time span {
+    color: #555;
+    font-size: 12px;
+    height: 18px;
+    position: absolute;
+    left: -40px;
+    width: 0px;
+    text-align: right;
+    line-height: 18px;
+    top: 0;
+  }
+  #main #info #introduction h1 {
+    font-size: 38px;
+    color: #00b38a;
+  }
+  #main #info #introduction h2 {
+    font-size: 28px;
+    color: #00b38a;
+    font-weight: normal;
+  }
+  #main #info #introduction h3 {
+    color: #555;
+    font-weight: normal;
+    font-size: 18px;
+  }
+  #main #info #introduction div span {
+    display: block;
+    color: #555;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  #main #skills .progress-bar {
+    width: 90%;
+  }
+  #main #skills ul li {
+    width: 100%;
+  }
+  #main #skills ul h5 {
+    font-size: 14px;
+  }
 }
