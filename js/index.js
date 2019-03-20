@@ -45,16 +45,17 @@ window.onload = function () {
             aDesc[i].style.height = H + "px";
         };
 
-        if (document.hasOwnProperty("ontouchstart")) {
-            oMain.addEventListener("touchstart", tStart, false);
-            oMain.addEventListener("touchmove", tMove, false);
-            oMain.addEventListener("touchend", tEnd, false);
-        } else {
-            oMain.addEventListener("mousewheel", fnM, false);
-        }
+        
     }
 
     init();
+    
+    oMain.addEventListener("touchstart", tStart, false);
+    oMain.addEventListener("touchmove", tMove, false);
+    oMain.addEventListener("touchend", tEnd, false);
+       
+    oMain.addEventListener("mousewheel", fnM, false);
+        
 
 
 
