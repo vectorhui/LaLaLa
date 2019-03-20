@@ -45,18 +45,14 @@ window.onload = function () {
             aDesc[i].style.height = H + "px";
         };
 
-        if (document.hasOwnProperty("ontouchstart")) {
-            oMain.addEventListener("touchstart", tStart, false);
-            oMain.addEventListener("touchmove", tMove, false);
-            oMain.addEventListener("touchend", tEnd, false);
-        } else {
-            oMain.addEventListener("mousewheel", fnM, false);
-        }
     }
 
     init();
 
-
+    oMain.addEventListener("touchstart", tStart, false);
+    oMain.addEventListener("touchmove", tMove, false);
+    oMain.addEventListener("touchend", tEnd, false);
+    oMain.addEventListener("mousewheel", fnM, false);
 
 
 
@@ -84,6 +80,7 @@ window.onload = function () {
     function fnM(ev) {
         var _this = this;
         var ev = ev || window.event;
+        ev.preventDefault();
         var dir = ev.wheelDelta;
 
         if (scrollRunning === false && dir < 0 && currentIndex < 3) {
@@ -101,6 +98,8 @@ window.onload = function () {
 
     function tStart(ev) {
         var ev = ev || window.event;
+        ev.preventDefault();
+
         disS = ev.changedTouches[0].pageY;
 
     }
@@ -108,6 +107,7 @@ window.onload = function () {
     function tMove(ev) {
         if (!scrollRunning) {
             var ev = ev || window.event;
+            ev.preventDefault();
             disM = ev.changedTouches[0].pageY - disS;
             x = disD + disM;
             if (x >= 0) {
@@ -120,6 +120,7 @@ window.onload = function () {
 
     function tEnd(ev) {
         var ev = ev || window.event;
+        ev.preventDefault();
         disM = ev.changedTouches[0].pageY - disS;
         if (disM < -100 && currentIndex < 3 && scrollRunning === false) {
             currentIndex++;
