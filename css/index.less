@@ -1,9 +1,9 @@
-@r: 25rem;
+@r: 16rem;
 
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    /* font-size: 16px; */
 }
 
 h1,
@@ -45,23 +45,23 @@ a {
 
         .desc-title,
         .desc-footer {
-            font-size: 20px;
+            font-size: 20/@r;
             position: absolute;
         }
 
         .desc-title {
-            top: 10px;
-            left: 10px;
+            top: 10/@r;
+            left: 10/@r;
         }
 
         .desc-footer {
-            bottom: 10px;
-            right: 10px;
+            bottom: 10/@r;
+            right: 10/@r;
         }
 
         .desc-content {
 
-            margin: 0 15%;
+            margin: 0 10%;
             height: 100%;
             overflow: hidden;
 
@@ -76,43 +76,43 @@ a {
         text-align: center;
 
         #logo {
-            width: 100px;
-            height: 100px;
+            width: 100/@r;
+            height: 100/@r;
             border: 4px solid white;
             border-radius: 50%;
             background: url(../images/img.jpg) no-repeat;
-            background-size: 100px 100px;
+            background-size: 100/@r 100/@r;
             margin: 0 auto;
-            margin-top: 200px;
+            margin-top: 200/@r;
         }
 
         #introduction {
             h1 {
-                font-size: 38px;
+                font-size: 38/@r;
                 color: #00b38a;
-                height: 80px;
-                line-height: 80px;
+                height: 80/@r;
+                line-height: 80/@r;
             }
 
             h2 {
-                font-size: 28px;
+                font-size: 28/@r;
                 color: #00b38a;
                 font-weight: normal;
-                height: 60px;
-                line-height: 60px;
+                height: 60/@r;
+                line-height: 60/@r;
             }
 
             h3 {
                 color: #555;
                 font-weight: normal;
-                font-size: 18px;
-                height: 40px;
-                line-height: 40px;
+                font-size: 18/@r;
+                height: 40/@r;
+                line-height: 40/@r;
             }
 
             p {
-                font-size: 16px;
-                margin-bottom: 8px;
+                font-size: 16/@r;
+                margin-bottom: 8/@r;
             }
 
         }
@@ -123,18 +123,18 @@ a {
         .desc-content {
 
             ul {
-                margin-top: 200px;
+                margin-top: 200/@r;
 
 
                 li {
-                    padding-top: 20px;
+                    padding-top: 20/@r;
                     width: 45%;
                     float: left;
                     margin-right: 5%;
 
                     h5 {
-                        font-size: 24px;
-                        height: 40px;
+                        font-size: 24/@r;
+                        height: 40/@r;
                         font-style: italic;
                         font-weight: normal;
                     }
@@ -146,7 +146,7 @@ a {
                         .anm-bar {
                             width: 0%;
                             background: yellowgreen;
-                            height: 10px;
+                            height: 10/@r;
                             transition: 1.5s;
                         }
                     }
@@ -167,11 +167,11 @@ a {
         .desc-content {
 
             ul {
-                margin-top: 150px;
+                margin-top: 150/@r;
 
                 li {
-                    width: 41%;
-                    height: 200px;
+                    width: 46%;
+                    height: 200/@r;
                     float: left;
                     margin: 2%;
                     position: relative;
@@ -184,9 +184,9 @@ a {
 
                     .project-detail {
                         width: 100%;
-                        height: 200px;
+                        height: 200/@r;
                         text-align: center;
-                        line-height: 200px;
+                        line-height: 200/@r;
                         background: rgba(0, 0, 0, 0.6);
 
                         img {
@@ -197,15 +197,15 @@ a {
 
                     .mark {
                         width: 100%;
-                        height: 200px;
+                        height: 200/@r;
                         background: rgba(0, 179, 138, 1);
                         position: absolute;
                         top: 0;
                         left: -100%;
                         color: #ffffff;
-                        font-size: 30px;
+                        font-size: 30/@r;
                         text-align: center;
-                        line-height: 200px;
+                        line-height: 200/@r;
 
                     }
                 }
@@ -223,12 +223,12 @@ a {
 
         .desc-content {
 
-            padding-top: 50px;
+            padding-top: 50/@r;
 
             .content-list {
                 border-left: 4px solid #000000;
                 padding-left: 10%;
-                padding-bottom: 40px;
+                padding-bottom: 40/@r;
                 margin: 0 0 0 20%;
                 width: 70%;
                 position: relative;
@@ -237,41 +237,49 @@ a {
                     overflow: hidden;
 
                     dt {
-                        font-size: 22px;
-                        margin-bottom: 30px;
+                        font-size: 22/@r;
+                        margin-bottom: 20/@r;
                     }
 
                     dd {
-                        padding: 10px 0;
-                        margin-left: 20px;
+                        padding: 10/@r 0;
+                        margin-left: 20/@r;
                         color: rgba(0, 0, 0, 0.6);
+                        font-size: 16/@r;
                     }
                 }
 
                 .work-icon {
-                    width: 30px;
-                    height: 30px;
+                    width: 30/@r;
+                    height: 30/@r;
                     border: 2px solid #000000;
                     border-radius: 50%;
                     text-align: center;
-                    line-height: 34px;
+                    line-height: 34/@r;
                     position: absolute;
                     top: 0;
-                    left: -19px;
+                    left: -19/@r;
                     background: #000;
+                    font-size: 16/@r;
 
                     .iconfont {
                         color: #ffffff;
+                        font-size: 16/@r;
+
                     }
 
                     .work-time {
                         position: absolute;
-                        width: 150px;
-                        left: -150px;
-                        font-size: 14px;
+                        width: 150/@r;
+                        left: -150/@r;
+                        font-size: 14/@r;
                         color: rgba(0, 0, 0, 0.6)
                     }
                 }
+            }
+
+            .content-list:last-child {
+                padding-bottom: 100%;
             }
         }
     }
@@ -281,35 +289,35 @@ a {
 
             #contact-me {
                 text-align: center;
-                margin-top: 200px;
+                margin-top: 200/@r;
 
                 h2 {
-                    font-size: 30px;
+                    font-size: 30/@r;
                     font-weight: normal;
-                    margin: 30px 0;
+                    margin: 30/@r 0;
                 }
 
                 .phone,
                 .mail {
-                    font-size: 22px;
+                    font-size: 22/@r;
                     font-weight: normal;
-                    height: 40px;
-                    line-height: 40px;
+                    height: 40/@r;
+                    line-height: 40/@r;
                     color: rgba(0, 0, 0, 0.6);
 
                     i {
-                        font-size: 24px;
-                        margin-right: 10px;
+                        font-size: 24/@r;
+                        margin-right: 10/@r;
                     }
                 }
 
                 p {
-                    height: 100px;
-                    line-height: 100px;
+                    height: 100/@r;
+                    line-height: 100/@r;
 
                     i {
-                        font-size: 34px;
-                        margin: 0 15px;
+                        font-size: 34/@r;
+                        margin: 0 15/@r;
                     }
 
                     .icon-weixin {
@@ -317,21 +325,21 @@ a {
                         position: relative;
 
                         #wechat {
-                            width: 200px;
-                            height: 200px;
+                            width: 200/@r;
+                            height: 200/@r;
                             background: url(../images/wechat.jpg) no-repeat;
                             background-size: 100% 100%;
                             position: absolute;
                             opacity: 0;
-                            top: 500px;
-                            left: -83px;
+                            top: 500/@r;
+                            left: -48/@r;
                         }
 
                     }
 
                     .icon-weixin:hover #wechat {
                         opacity: 1;
-                        top: 100px;
+                        top: 100/@r;
                         transition: .5s;
                     }
 
@@ -354,36 +362,114 @@ a {
         padding: 0;
 
         li {
-            font-size: 14px;
-            width: 35px;
-            height: 35px;
+            font-size: 14/@r;
+            width: 35/@r;
+            height: 35/@r;
             border-radius: 50%;
             background: rgba(0, 0, 0, 0.8);
             color: white;
             padding: 0;
-            margin-bottom: 5px;
+            margin-bottom: 5/@r;
             text-align: center;
-            line-height: 35px;
+            line-height: 35/@r;
             transition: .3s;
             cursor: pointer;
         }
 
         .active {
-            width: 60px;
-            height: 60px;
-            line-height: 60px;
+            width: 60/@r;
+            height: 60/@r;
+            line-height: 60/@r;
             background: #00b38a;
         }
     }
 }
 
-@media screen and (max-width:750px) {
+@media screen and (max-width:480px) {
 
     #nav {
         display: none;
     }
 
     #main {
+
+        .desc {
+            position: relative;
+            background: #ffffff;
+
+            .desc-title,
+            .desc-footer {
+                font-size: 20/@r;
+                position: absolute;
+            }
+
+            .desc-title {
+                top: 10/@r;
+                left: 10/@r;
+            }
+
+            .desc-footer {
+                bottom: 10/@r;
+                right: 10/@r;
+            }
+
+            .desc-content {
+
+                margin: 0 15%;
+                height: 100%;
+                overflow: hidden;
+
+            }
+
+
+        }
+
+        #info {
+            overflow: hidden;
+            text-align: center;
+
+            #logo {
+                width: 100/@r;
+                height: 100/@r;
+                border: 4px solid white;
+                border-radius: 50%;
+                background: url(../images/img.jpg) no-repeat;
+                background-size: 100/@r 100/@r;
+                margin: 0 auto;
+                margin-top: 200/@r;
+            }
+
+            #introduction {
+                h1 {
+                    font-size: 38/@r;
+                    color: #00b38a;
+                    height: 80/@r;
+                    line-height: 80/@r;
+                }
+
+                h2 {
+                    font-size: 28/@r;
+                    color: #00b38a;
+                    font-weight: normal;
+                    height: 60/@r;
+                    line-height: 60/@r;
+                }
+
+                h3 {
+                    color: #555;
+                    font-weight: normal;
+                    font-size: 18/@r;
+                    height: 40/@r;
+                    line-height: 40/@r;
+                }
+
+                p {
+                    font-size: 16/@r;
+                    margin-bottom: 8/@r;
+                }
+
+            }
+        }
 
         #skills {
 
@@ -394,11 +480,24 @@ a {
             .desc-content {
 
                 ul {
-                    margin-top: 100px;
+                    margin-top: 100/@r;
 
                     li {
                         width: 100%;
-                        padding-top: 25px;
+                        padding-top: 25/@r;
+
+                        h5 {
+                            font-size: 24/@r;
+                            height: 40/@r;
+
+                        }
+
+                        .progress-bar {
+
+                            .anm-bar {
+                                height: 10/@r;
+                            }
+                        }
                     }
 
                 }
@@ -411,18 +510,18 @@ a {
         #project {
             .desc-content {
                 ul {
-                    margin-top: 100px;
+                    margin-top: 100/@r;
 
                     li {
                         width: 96%;
-                        height: 120px;
+                        height: 120/@r;
 
                         .project-detail {
                             width: 100%;
-                            height: 120px;
-                            line-height: 120px;
+                            height: 120/@r;
+                            line-height: 120/@r;
 
-                            
+
                         }
 
                         .mark {
@@ -433,9 +532,9 @@ a {
                             top: 80%;
                             left: 0;
                             color: #ffffff;
-                            font-size: 16px;
+                            font-size: 16/@r;
                             text-align: center;
-                            line-height: 24px;
+                            line-height: 24/@r;
                         }
                     }
                 }
@@ -446,13 +545,13 @@ a {
 
             .desc-content {
 
-                padding-top: 50px;
+                padding-top: 50/@r;
                 margin: 0 2%;
 
                 .content-list {
                     border-left: 2px solid #000000;
                     padding-left: 5%;
-                    padding-bottom: 20px;
+                    padding-bottom: 20/@r;
                     margin: 0 0 0 15%;
                     width: 80%;
                     position: relative;
@@ -461,44 +560,365 @@ a {
                         overflow: hidden;
 
                         dt {
-                            font-size: 18px;
-                            margin-bottom: 25px;
+                            font-size: 18/@r;
+                            margin-bottom: 25/@r;
                         }
 
                         dd {
-                            padding: 5px 0;
-                            margin-left: 10px;
+                            padding: 5/@r 0;
+                            margin-left: 10/@r;
                             color: rgba(0, 0, 0, 0.6);
+                            font-size: 16/@r;
                         }
                     }
 
                     .work-icon {
-                        width: 24px;
-                        height: 24px;
+                        width: 24/@r;
+                        height: 24/@r;
                         border: 2px solid #000000;
                         border-radius: 50%;
                         text-align: center;
-                        line-height: 24px;
+                        line-height: 24/@r;
                         position: absolute;
                         top: 0;
-                        left: -15px;
+                        left: -15/@r;
                         background: #000;
+                        font-size: 16/@r;
 
                         .iconfont {
                             color: #ffffff;
+                            font-size: 16/@r;
                         }
 
                         .work-time {
                             position: absolute;
-                            width: 50px;
-                            left: -50px;
-                            font-size: 14px;
+                            width: 50/@r;
+                            left: -50/@r;
+                            font-size: 14/@r;
+                            color: rgba(0, 0, 0, 0.6);
+                            top: 0;
+                        }
+                    }
+                }
+
+                .content-list:last-child {
+                    padding-bottom: 100%;
+                }
+            }
+        }
+
+        #contact {
+            .desc-content {
+
+
+                #contact-me {
+                    text-align: center;
+                    margin-top: 200/@r;
+
+                    h2 {
+                        font-size: 30/@r;
+                        font-weight: normal;
+                        margin: 30/@r 0;
+                    }
+
+                    .phone,
+                    .mail {
+                        font-size: 22/@r;
+                        font-weight: normal;
+                        height: 40/@r;
+                        line-height: 40/@r;
+                        color: rgba(0, 0, 0, 0.6);
+
+                        i {
+                            font-size: 24/@r;
+                            margin-right: 10/@r;
+                        }
+                    }
+
+                    p {
+                        height: 100/@r;
+                        line-height: 100/@r;
+
+                        i {
+                            font-size: 34/@r;
+                            margin: 0 15/@r;
+                        }
+
+                        .icon-weixin {
+                            color: #00bc0d;
+                            position: relative;
+
+                            #wechat {
+                                width: 200/@r;
+                                height: 200/@r;
+                                background: url(../images/wechat.jpg) no-repeat;
+                                background-size: 100% 100%;
+                                position: absolute;
+                                opacity: 1;
+                                top: 50/@r;
+                                left: -48/@r;
+                            }
+
+                        }
+
+                    }
+
+
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-height:480px) {
+
+    #main {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        .desc {
+            position: relative;
+            background: #ffffff;
+
+            .desc-title,
+            .desc-footer {
+                font-size: 20/@r;
+                position: absolute;
+            }
+
+            .desc-title {
+                top: 10/@r;
+                left: 10/@r;
+            }
+
+            .desc-footer {
+                bottom: 10/@r;
+                right: 10/@r;
+            }
+
+            .desc-content {
+
+                margin: 0 10%;
+                height: 100%;
+                overflow: hidden;
+
+            }
+
+
+        }
+
+
+        #info {
+            overflow: hidden;
+            text-align: center;
+
+            #logo {
+                width: 100/@r;
+                height: 100/@r;
+                border: 4px solid white;
+                border-radius: 50%;
+                background: url(../images/img.jpg) no-repeat;
+                background-size: 100/@r 100/@r;
+                margin: 0 auto;
+                margin-top: 100/@r;
+            }
+
+            #introduction {
+                h1 {
+                    font-size: 38/@r;
+                    color: #00b38a;
+                    height: 80/@r;
+                    line-height: 80/@r;
+                }
+
+                h2 {
+                    font-size: 28/@r;
+                    color: #00b38a;
+                    font-weight: normal;
+                    height: 60/@r;
+                    line-height: 60/@r;
+                }
+
+                h3 {
+                    color: #555;
+                    font-weight: normal;
+                    font-size: 18/@r;
+                    height: 40/@r;
+                    line-height: 40/@r;
+                }
+
+                p {
+                    font-size: 16/@r;
+                    margin-bottom: 8/@r;
+                }
+
+            }
+        }
+
+        #skills {
+
+            .desc-content {
+
+                ul {
+                    margin-top: 200/@r;
+
+
+                    li {
+                        padding-top: 20/@r;
+                        width: 45%;
+                        float: left;
+                        margin-right: 5%;
+
+                        h5 {
+                            font-size: 24/@r;
+                            height: 40/@r;
+                            font-style: italic;
+                            font-weight: normal;
+                        }
+
+                        .progress-bar {
+                            width: 100%;
+                            background: #555;
+
+                            .anm-bar {
+                                width: 0%;
+                                background: yellowgreen;
+                                height: 10/@r;
+                                transition: 1.5s;
+                            }
+                        }
+
+                    }
+                }
+
+                ul::after {
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+            }
+        }
+
+        #project {
+
+            .desc-content {
+
+                ul {
+                    margin-top: 75/@r;
+
+                    li {
+                        width: 46%;
+                        height: 200/@r;
+                        float: left;
+                        margin: 2%;
+                        position: relative;
+                        overflow: hidden;
+
+                        a:hover .mark {
+                            left: 0;
+                            transition: 0.3s;
+                        }
+
+                        .project-detail {
+                            width: 100%;
+                            height: 200/@r;
+                            text-align: center;
+                            line-height: 200/@r;
+                            background: rgba(0, 0, 0, 0.6);
+
+                            img {
+                                width: 75%;
+                                vertical-align: middle;
+                            }
+                        }
+
+                        .mark {
+                            width: 100%;
+                            height: 200/@r;
+                            background: rgba(0, 179, 138, 1);
+                            position: absolute;
+                            top: 0;
+                            left: -100%;
+                            color: #ffffff;
+                            font-size: 30/@r;
+                            text-align: center;
+                            line-height: 200/@r;
+
+                        }
+                    }
+                }
+
+                ul::after {
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+            }
+        }
+
+        #work {
+
+            .desc-content {
+
+                padding-top: 25/@r;
+
+                .content-list {
+                    border-left: 4px solid #000000;
+                    padding-left: 10%;
+                    padding-bottom: 15/@r;
+                    margin: 0 0 0 20%;
+                    width: 70%;
+                    position: relative;
+
+                    dl {
+                        overflow: hidden;
+
+                        dt {
+                            font-size: 22/@r;
+                            margin-bottom: 20/@r;
+                        }
+
+                        dd {
+                            padding: 10/@r 0;
+                            margin-left: 20/@r;
+                            color: rgba(0, 0, 0, 0.6);
+                            font-size: 16/@r;
+                        }
+                    }
+
+                    .work-icon {
+                        width: 30/@r;
+                        height: 30/@r;
+                        border: 2px solid #000000;
+                        border-radius: 50%;
+                        text-align: center;
+                        line-height: 34/@r;
+                        position: absolute;
+                        top: 0;
+                        left: -19/@r;
+                        background: #000;
+                        font-size: 16/@r;
+
+                        .iconfont {
+                            color: #ffffff;
+                            font-size: 16/@r;
+
+                        }
+
+                        .work-time {
+                            position: absolute;
+                            width: 150/@r;
+                            left: -170/@r;
+                            font-size: 14/@r;
                             color: rgba(0, 0, 0, 0.6)
                         }
                     }
                 }
 
-                .content-list:last-child{
+                .content-list:last-child {
                     padding-bottom: 100%;
                 }
             }
@@ -508,27 +928,99 @@ a {
             .desc-content {
 
                 #contact-me {
+                    text-align: center;
+                    margin-top: 100/@r;
+
+                    h2 {
+                        font-size: 30/@r;
+                        font-weight: normal;
+                        margin: 30/@r 0;
+                    }
+
+                    .phone,
+                    .mail {
+                        font-size: 22/@r;
+                        font-weight: normal;
+                        height: 40/@r;
+                        line-height: 40/@r;
+                        color: rgba(0, 0, 0, 0.6);
+
+                        i {
+                            font-size: 24/@r;
+                            margin-right: 10/@r;
+                        }
+                    }
 
                     p {
+                        height: 100/@r;
+                        line-height: 100/@r;
+
+                        i {
+                            font-size: 34/@r;
+                            margin: 0 15/@r;
+                        }
 
                         .icon-weixin {
-
+                            color: #00bc0d;
+                            position: relative;
 
                             #wechat {
-                                width: 100px;
-                                height: 100px;
-                                opacity: 1;
-                                top: 50px;
-                                left: -33px;
+                                width: 200/@r;
+                                height: 200/@r;
+                                background: url(../images/wechat.jpg) no-repeat;
+                                background-size: 100% 100%;
+                                position: absolute;
+                                opacity: 0;
+                                top: 500/@r;
+                                left: -48/@r;
                             }
 
                         }
+
+                        .icon-weixin:hover #wechat {
+                            opacity: 1;
+                            top: 100/@r;
+                            transition: .5s;
+                        }
+
 
 
                     }
 
 
                 }
+            }
+        }
+    }
+
+    #nav {
+        position: fixed;
+        top: 35%;
+        left: 5px;
+
+        ul {
+            padding: 0;
+
+            li {
+                font-size: 14/@r;
+                width: 35/@r;
+                height: 35/@r;
+                border-radius: 50%;
+                background: rgba(0, 0, 0, 0.8);
+                color: white;
+                padding: 0;
+                margin-bottom: 5/@r;
+                text-align: center;
+                line-height: 35/@r;
+                transition: .3s;
+                cursor: pointer;
+            }
+
+            .active {
+                width: 60/@r;
+                height: 60/@r;
+                line-height: 60/@r;
+                background: #00b38a;
             }
         }
     }
