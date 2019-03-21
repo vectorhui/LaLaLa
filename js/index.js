@@ -6,6 +6,10 @@ window.onload = function () {
     var oUl = oNav.querySelector("ul");
     var aLi = oUl.querySelectorAll("li");
 
+
+    var aProjectLi = oMain.querySelectorAll(".project-list");
+    var aMark = oMain.querySelectorAll(".mark");
+
     var aBar = document.getElementsByClassName("anm-bar");
 
     var H = document.documentElement.clientHeight;
@@ -16,7 +20,8 @@ window.onload = function () {
         ["Info", "I"],
         ["Skills", "S"],
         ["Project", "P"],
-        ["Work", "W"]
+        ["Work", "W"],
+        ["Contact", "C"]
     ];
 
     var disD = 0;
@@ -25,6 +30,7 @@ window.onload = function () {
     var x = 0;
     var currentIndex = 0;
     var scrollRunning = false;
+    var pages = aDesc.length;
 
 
 
@@ -41,28 +47,18 @@ window.onload = function () {
 
         oContainer.style.height = H + "px";
 
-        for (var i = 0; i < aDesc.length; i++) {
+        for (var i = 0; i < pages; i++) {
             aDesc[i].style.height = H + "px";
         };
 
     }
 
     init();
-    
-    oMain.addEventListener("touchstart", tStart, false);
-    oMain.addEventListener("touchmove", tMove, false);
-    oMain.addEventListener("touchend", tEnd, false);
-       
-    oMain.addEventListener("mousewheel", fnM, false);
-        
 
     oMain.addEventListener("touchstart", tStart, false);
     oMain.addEventListener("touchmove", tMove, false);
     oMain.addEventListener("touchend", tEnd, false);
     oMain.addEventListener("mousewheel", fnM, false);
-
-
-
 
     function doScroll(obj, dir) {
 
@@ -90,7 +86,7 @@ window.onload = function () {
         ev.preventDefault();
         var dir = ev.wheelDelta;
 
-        if (scrollRunning === false && dir < 0 && currentIndex < 3) {
+        if (scrollRunning === false && dir < 0 && currentIndex < pages - 1) {
             doScroll(_this, dir);
             if (currentIndex === 1) {
                 doAnimate();
@@ -129,7 +125,7 @@ window.onload = function () {
         var ev = ev || window.event;
         ev.preventDefault();
         disM = ev.changedTouches[0].pageY - disS;
-        if (disM < -100 && currentIndex < 3 && scrollRunning === false) {
+        if (disM < -100 && currentIndex < (pages - 1) && scrollRunning === false) {
             currentIndex++;
             scrollRunning = true;
             this.style.top = -(currentIndex) * H + "px";
@@ -183,6 +179,63 @@ window.onload = function () {
             }
         }
     }
+
+/* 
+    for (let i = 0; i < aProjectLi.length; i++) {
+        aProjectLi[i].onmouseover = function (ev) {
+
+            var ev = ev || window.event;
+            var mX = ev.clientX;
+            var mY = ev.clientY;
+
+            var T = aProjectLi[i].offsetTop;
+            var B = T + aProjectLi[i].offsetHeight;
+            var L = aProjectLi[i].offsetLeft;
+            var R = L + aProjectLi[i].offsetWidth;
+
+            var pT = Math.abs(mY - T);
+            var pB = Math.abs(mY - B);
+            var pL = Math.abs(mX - L);
+            var pR = Math.abs(mX - R);
+
+            var minDis = Math.min(pT, pB, pL, pR);
+
+            function doMove(n) {
+                aMark[n].style.top = "0%";
+                aMark[n].style.left = "0%";
+                aMark[n].style.transition = "0.5s";
+            }
+
+            switch (minDis) {
+                case pT: //鼠标移入方向为上方移入
+
+                    aMark[n].style.top = "-100%";   //把div定位到父级元素上方
+                    aMark[n].style.left = "0%";
+
+                    aMark[n].style.top = "0%";
+                    aMark[n].style.transition = "0.5s";  //滑动div
+
+                    console.log('上')
+                    break;
+                case pB:
+                    doMove(i);
+
+                    console.log('下')
+                    break;
+                case pL:
+                    doMove(i);
+
+                    console.log('左')
+                    break;
+                case pR:
+                    doMove(i);
+
+                    console.log('右')
+            }
+
+
+        }
+    } */
 
 
 }

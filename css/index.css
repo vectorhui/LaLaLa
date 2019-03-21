@@ -3,17 +3,24 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
-a {
-  text-decoration: none;
-  color: #555555;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dd {
+  margin: 0;
 }
 ul {
   margin: 0;
   padding: 0;
-}
-li {
-  padding: 0;
   list-style: none;
+}
+a {
+  text-decoration: none;
 }
 #container {
   overflow: hidden;
@@ -24,53 +31,30 @@ li {
   top: 0;
   left: 0;
   width: 100%;
-  color: white;
 }
-#main .desc-title {
-  font-size: 32px;
-  margin-left: 5%;
-}
-#main .desc-content {
-  width: 85%;
-  height: 100%;
-  margin: 0 auto;
-}
-#main .desc-content h3 {
-  margin: 0;
-  font-size: 24px;
-  font-weight: normal;
-}
-#main .desc-content .content-list {
-  margin-left: 30%;
-  border-left: 4px solid #ffffff;
+#main .desc {
   position: relative;
-  padding: 3px 0 10px 50px;
-}
-#main .desc-content .content-list ul li {
-  padding: 10px 20px;
-}
-#main .desc-content .content-list .desc-content-time {
-  width: 40px;
-  height: 40px;
-  border-radius: 40px;
   background: #ffffff;
-  position: absolute;
-  top: 0px;
-  left: -22px;
 }
-#main .desc-content .content-list .desc-content-time span {
-  color: #555;
-  font-size: 16px;
+#main .desc .desc-title,
+#main .desc .desc-footer {
+  font-size: 20px;
   position: absolute;
-  left: -220px;
-  height: 30px;
-  width: 200px;
-  text-align: right;
-  line-height: 30px;
-  top: 5px;
+}
+#main .desc .desc-title {
+  top: 10px;
+  left: 10px;
+}
+#main .desc .desc-footer {
+  bottom: 10px;
+  right: 10px;
+}
+#main .desc .desc-content {
+  margin: 0 15%;
+  height: 100%;
+  overflow: hidden;
 }
 #main #info {
-  background: #eeeeee;
   overflow: hidden;
   text-align: center;
 }
@@ -82,196 +66,319 @@ li {
   background: url(../images/img.jpg) no-repeat;
   background-size: 100px 100px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 #main #info #introduction h1 {
   font-size: 38px;
   color: #00b38a;
+  height: 80px;
+  line-height: 80px;
 }
 #main #info #introduction h2 {
   font-size: 28px;
   color: #00b38a;
   font-weight: normal;
+  height: 60px;
+  line-height: 60px;
 }
 #main #info #introduction h3 {
   color: #555;
   font-weight: normal;
   font-size: 18px;
+  height: 40px;
+  line-height: 40px;
 }
-#main #info #introduction div span {
-  display: block;
-  color: #555;
+#main #info #introduction p {
   font-size: 16px;
-  margin-top: 10px;
+  margin-bottom: 8px;
 }
-#main #skills {
-  background: #00b38a;
-  overflow: hidden;
+#main #skills .desc-content ul {
+  margin-top: 200px;
 }
-#main #skills .progress-bar {
-  width: 90%;
-  height: 10px;
-  background: #555;
-}
-#main #skills .desc-content {
-  width: 85%;
-  margin: 0 auto;
-}
-#main #skills ul li {
-  padding-top: 15px;
-  width: 50%;
+#main #skills .desc-content ul li {
+  padding-top: 20px;
+  width: 45%;
   float: left;
+  margin-right: 5%;
 }
-#main #skills ul h5 {
-  width: 20%;
+#main #skills .desc-content ul li h5 {
   font-size: 24px;
+  height: 40px;
+  font-style: italic;
   font-weight: normal;
 }
-#main #skills ul #html-bar {
+#main #skills .desc-content ul li .progress-bar {
+  width: 100%;
+  background: #555;
+}
+#main #skills .desc-content ul li .progress-bar .anm-bar {
   width: 0%;
   background: yellowgreen;
   height: 10px;
-  transition: 1s;
+  transition: 1.5s;
 }
-#main #skills ul #css-bar {
-  width: 0%;
-  background: yellowgreen;
-  height: 10px;
-  transition: 1s;
+#main #skills .desc-content ul::after {
+  content: "";
+  display: block;
+  clear: both;
 }
-#main #skills ul #js-bar {
-  width: 0%;
-  background: yellowgreen;
-  height: 10px;
-  transition: 1s;
+#main #project .desc-content ul {
+  margin-top: 150px;
 }
-#main #skills ul #bs-bar {
-  width: 0%;
-  background: yellowgreen;
-  height: 10px;
-  transition: 1s;
-}
-#main #skills ul #v-bar {
-  width: 0%;
-  background: yellowgreen;
-  height: 10px;
-  transition: 1s;
-}
-#main #skills ul #axure-bar {
-  width: 0%;
-  background: yellowgreen;
-  height: 10px;
-  transition: 1s;
-}
-#main #project {
-  background: #eeeeee;
+#main #project .desc-content ul li {
+  width: 41%;
+  height: 200px;
+  float: left;
+  margin: 2%;
+  position: relative;
   overflow: hidden;
-  color: #00b38a;
 }
-#main #project .desc-content .content-list {
-  height: 30%;
+#main #project .desc-content ul li a:hover .mark {
+  left: 0;
+  transition: 0.3s;
 }
-#main #work {
+#main #project .desc-content ul li .project-detail {
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  line-height: 200px;
+  background: rgba(0, 0, 0, 0.6);
+}
+#main #project .desc-content ul li .project-detail img {
+  width: 75%;
+  vertical-align: middle;
+}
+#main #project .desc-content ul li .mark {
+  width: 100%;
+  height: 200px;
   background: #00b38a;
-  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+  line-height: 200px;
+}
+#main #project .desc-content ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#main #work .desc-content {
+  padding-top: 50px;
 }
 #main #work .desc-content .content-list {
-  height: 24%;
+  border-left: 4px solid #000000;
+  padding-left: 10%;
+  padding-bottom: 40px;
+  margin: 0 0 0 20%;
+  width: 70%;
+  position: relative;
+}
+#main #work .desc-content .content-list dl {
+  overflow: hidden;
+}
+#main #work .desc-content .content-list dl dt {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+#main #work .desc-content .content-list dl dd {
+  padding: 10px 0;
+  margin-left: 20px;
+  color: rgba(0, 0, 0, 0.6);
+}
+#main #work .desc-content .content-list .work-icon {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 34px;
+  position: absolute;
+  top: 0;
+  left: -19px;
+  background: #000;
+}
+#main #work .desc-content .content-list .work-icon .iconfont {
+  color: #ffffff;
+}
+#main #work .desc-content .content-list .work-icon .work-time {
+  position: absolute;
+  width: 150px;
+  left: -150px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}
+#main #contact .desc-content #contact-me {
+  text-align: center;
+  margin-top: 200px;
+}
+#main #contact .desc-content #contact-me h2 {
+  font-size: 30px;
+  font-weight: normal;
+  margin: 30px 0;
+}
+#main #contact .desc-content #contact-me .phone,
+#main #contact .desc-content #contact-me .mail {
+  font-size: 22px;
+  font-weight: normal;
+  height: 40px;
+  line-height: 40px;
+  color: rgba(0, 0, 0, 0.6);
+}
+#main #contact .desc-content #contact-me .phone i,
+#main #contact .desc-content #contact-me .mail i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+#main #contact .desc-content #contact-me p {
+  height: 100px;
+  line-height: 100px;
+}
+#main #contact .desc-content #contact-me p i {
+  font-size: 34px;
+  margin: 0 15px;
+}
+#main #contact .desc-content #contact-me p .icon-weixin {
+  color: #00bc0d;
+  position: relative;
+}
+#main #contact .desc-content #contact-me p .icon-weixin #wechat {
+  width: 200px;
+  height: 200px;
+  background: url(../images/wechat.jpg) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  opacity: 0;
+  top: 500px;
+  left: -83px;
+}
+#main #contact .desc-content #contact-me p .icon-weixin:hover #wechat {
+  opacity: 1;
+  top: 100px;
+  transition: .5s;
 }
 #nav {
   position: fixed;
-  top: 40%;
-  left: 0;
+  top: 35%;
+  left: 5px;
 }
 #nav ul {
   padding: 0;
 }
 #nav ul li {
-  width: 40px;
-  height: 40px;
-  background: #333333;
+  font-size: 14px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.8);
   color: white;
   padding: 0;
-  margin-top: 5px;
+  margin-bottom: 5px;
   text-align: center;
-  line-height: 40px;
+  line-height: 35px;
   transition: .3s;
   cursor: pointer;
-}
-#nav ul li :hover {
-  background: rgba(33, 33, 33, 0.5);
 }
 #nav ul .active {
   width: 60px;
   height: 60px;
   line-height: 60px;
+  background: #00b38a;
 }
 @media screen and (max-width: 750px) {
   #nav {
     display: none;
   }
-  #main .desc-title {
-    font-size: 22px;
-  }
-  #main .desc-content {
-    width: 95%;
-  }
-  #main .desc-content h3 {
-    font-size: 16px;
-  }
-  #main .desc-content .content-list {
-    margin-left: 15%;
-    border-left: 2px solid #ffffff;
-    position: relative;
-    padding: 0px 0 10px 20px;
-  }
-  #main .desc-content .content-list ul li {
-    padding: 15px 0 0 10px;
-  }
-  #main .desc-content .content-list .desc-content-time {
-    width: 18px;
-    height: 18px;
-    border-radius: 18px;
-    left: -10px;
-  }
-  #main .desc-content .content-list .desc-content-time span {
-    color: #555;
-    font-size: 12px;
-    height: 18px;
-    position: absolute;
-    left: -40px;
-    width: 0px;
-    text-align: right;
-    line-height: 18px;
-    top: 0;
-  }
-  #main #info #introduction h1 {
-    font-size: 38px;
-    color: #00b38a;
-  }
-  #main #info #introduction h2 {
-    font-size: 28px;
-    color: #00b38a;
-    font-weight: normal;
-  }
-  #main #info #introduction h3 {
-    color: #555;
-    font-weight: normal;
-    font-size: 18px;
-  }
-  #main #info #introduction div span {
-    display: block;
-    color: #555;
-    font-size: 16px;
-    margin-top: 10px;
-  }
   #main #skills .progress-bar {
     width: 90%;
   }
-  #main #skills ul li {
-    width: 100%;
+  #main #skills .desc-content ul {
+    margin-top: 100px;
   }
-  #main #skills ul h5 {
+  #main #skills .desc-content ul li {
+    width: 100%;
+    padding-top: 25px;
+  }
+  #main #project .desc-content ul {
+    margin-top: 100px;
+  }
+  #main #project .desc-content ul li {
+    width: 96%;
+    height: 120px;
+  }
+  #main #project .desc-content ul li .project-detail {
+    width: 100%;
+    height: 120px;
+    line-height: 120px;
+  }
+  #main #project .desc-content ul li .mark {
+    width: 100%;
+    height: 20%;
+    background: rgba(0, 179, 138, 0.8);
+    position: absolute;
+    top: 80%;
+    left: 0;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+  }
+  #main #work .desc-content {
+    padding-top: 50px;
+    margin: 0 2%;
+  }
+  #main #work .desc-content .content-list {
+    border-left: 2px solid #000000;
+    padding-left: 5%;
+    padding-bottom: 20px;
+    margin: 0 0 0 15%;
+    width: 80%;
+    position: relative;
+  }
+  #main #work .desc-content .content-list dl {
+    overflow: hidden;
+  }
+  #main #work .desc-content .content-list dl dt {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  #main #work .desc-content .content-list dl dd {
+    padding: 5px 0;
+    margin-left: 10px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  #main #work .desc-content .content-list .work-icon {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    position: absolute;
+    top: 0;
+    left: -15px;
+    background: #000;
+  }
+  #main #work .desc-content .content-list .work-icon .iconfont {
+    color: #ffffff;
+  }
+  #main #work .desc-content .content-list .work-icon .work-time {
+    position: absolute;
+    width: 50px;
+    left: -50px;
     font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  #main #work .desc-content .content-list:last-child {
+    padding-bottom: 100%;
+  }
+  #main #contact .desc-content #contact-me p .icon-weixin #wechat {
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+    top: 50px;
+    left: -33px;
   }
 }
